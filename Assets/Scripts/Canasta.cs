@@ -4,28 +4,38 @@ using UnityEngine;
 
 public class Canasta : MonoBehaviour
 {
-    public GameObject canasta;
-    public float horizantalInput;
-    public float velocidad = 10f;
+    [SerializeField]
+    private GameObject canasta;
+    private float horizantalInput;
+    private float velocidad = 10f;
+    private float limites = 10f;
 
-    public float limites = 10f;
+    public float Velocidad
+    {
+        get { return velocidad; }
+        set { velocidad = value; }
+    }
 
+    public float Limites
+    {
+        get { return limites; }
+        set{ limites = Mathf.Abs(value);}
+    }
 
     void Update()
     {
         Move();
-        Limites();
+        AplicarLimites();
     }
-    public virtual void Move()
+    protected  void Move()
     {
-        // Ejemplo de movimiento horizontal
         float movimientoHorizontal = Input.GetAxis("Horizontal") * velocidad * Time.deltaTime;
         transform.Translate(movimientoHorizontal, 0, 0);
     }
 
-    //lIMITAR EL MOVIMIENNTO DE LA CANASTA
 
-    public virtual void Limites()
+    //Limites para la canasta
+    protected  void AplicarLimites()
     {
         if (transform.position.x > limites)
         {

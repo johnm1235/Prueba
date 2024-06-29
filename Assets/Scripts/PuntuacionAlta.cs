@@ -5,7 +5,11 @@ public class PuntuacionAlta : MonoBehaviour
 {
     public static PuntuacionAlta Instance;
 
-    public int HighScore { get; private set; }
+    public int BestScore { get; private set; }
+    class SaveData
+    {
+        public int BestScore;
+    }
 
     private void Awake()
     {
@@ -17,38 +21,37 @@ public class PuntuacionAlta : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        LoadHighScore();
+        LoadBestScore();
     }
 
-    public void TryUpdateHighScore(int score)
+    //Actualizar la puntucion mas alta
+    public void UpdateBestScore(int score)
     {
-        if (score > HighScore)
+        if (score > BestScore)
         {
-            HighScore = score;
-            SaveHighScore();
+            BestScore = score;
+            SaveBestScore();
         }
     }
 
-    private void LoadHighScore()
+    //cargar la puntuacion mas alta
+    private void LoadBestScore()
     {
         string path = Application.persistentDataPath + "/highscore.json";
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
-            HighScore = JsonUtility.FromJson<SaveData>(json).highScore;
+            BestScore = JsonUtility.FromJson<SaveData>(json).BestScore;
         }
     }
 
-    private void SaveHighScore()
+    private void SaveBestScore()
     {
-        SaveData data = new SaveData { highScore = HighScore };
+        SaveData data = new SaveData { BestScore = BestScore };
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(Application.persistentDataPath + "/highscore.json", json);
     }
 
-    class SaveData
-    {
-        public int highScore;
-    }
+
 }
 

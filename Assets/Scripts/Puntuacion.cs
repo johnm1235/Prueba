@@ -17,19 +17,13 @@ public class Puntuacion : MonoBehaviour
     class SaveData
     {
         public int score;
-        public int highScore;
     }
 
     void Start()
     {
         LoadScore();
-
     }
-    private void Update()
-    {
-      
 
-    }
     public void LoadGameScene()
     {
         SceneManager.LoadScene(1);
@@ -40,7 +34,7 @@ public class Puntuacion : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Objeto"))
         {
-            // Incrementa el puntaje
+            // subir el puntaje al recoger un objeto
             m_Points++;
             ScoreText.text = "Score: " + m_Points;
             Destroy(other.gameObject);
@@ -53,6 +47,7 @@ public class Puntuacion : MonoBehaviour
        
     }
 
+    // Salir del juego
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -60,14 +55,13 @@ public class Puntuacion : MonoBehaviour
 #else
         Application.Quit();
 #endif
-        //  MainManager.Instance.SaveColor();
+     
     }
-
 
 
     private void GameOver()
     {
-        PuntuacionAlta.Instance.TryUpdateHighScore(m_Points);
+        PuntuacionAlta.Instance.UpdateBestScore(m_Points);
         SaveScore();
         SceneManager.LoadScene(0);
     }
@@ -91,8 +85,8 @@ public class Puntuacion : MonoBehaviour
             SaveData data = JsonUtility.FromJson<SaveData>(json);
             ScoreText2.text = $"Last Score : {data.score}";
         }
-        // Añade esta línea para mostrar la puntuación más alta
-        ScoreText2.text += $"\nBest Score: {PuntuacionAlta.Instance.HighScore}";
+      
+        ScoreText2.text += $"\nBest Score: {PuntuacionAlta.Instance.BestScore}";
     }
 
 

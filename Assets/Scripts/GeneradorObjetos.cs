@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneradorObjetos : Canasta
+public class GeneradorObjetos : MonoBehaviour
 {
     //instancia objetos 
     public GameObject[] objetos;
@@ -17,29 +17,26 @@ public class GeneradorObjetos : Canasta
     void Start()
     {
         StartCoroutine(SpawnObjetos());
-        // Inicia la generación de objetos
-
     }
 
     IEnumerator SpawnObjetos()
     {
         while (true)
         {
-            // Calcula el tiempo de espera para el próximo objeto
+            // timpo para el proximo spawn
             tiempoSpawn = Random.Range(tiempoMin, tiempoMax);
             yield return new WaitForSeconds(tiempoSpawn);
 
-            // Selecciona un objeto aleatorio para instanciar
             int index = Random.Range(0, objetos.Length);
             GameObject objetoSeleccionado = objetos[index];
 
-            // Genera una posición aleatoria en la parte superior de la pantalla
+            //posicion de spawn
             Vector3 posicionSpawn = new Vector3(Random.Range(limiteIzquierdo, limiteDerecho), transform.position.y, 0);
 
-            // Instancia el objeto
+            //instanciar objeto
             GameObject objetoInstanciado = Instantiate(objetoSeleccionado, posicionSpawn, Quaternion.identity);
 
-            // Inicia una corutina para verificar y destruir el objeto si sale de los límites
+            //corrutina para destruir el objeto
             StartCoroutine(DestruirSiSaleDeLimites(objetoInstanciado));
         }
     }
@@ -49,13 +46,13 @@ public class GeneradorObjetos : Canasta
         // Mantiene la corutina activa mientras el objeto exista
         while (objeto != null)
         {
-            // Verifica si el objeto ha salido de los límites
+            //Si el objeto sale del limite
             if (objeto.transform.position.y > limiteSuperior || objeto.transform.position.y < limiteInferior ||
                 objeto.transform.position.x > limiteDerecho || objeto.transform.position.x < limiteIzquierdo)
             {
-                Destroy(objeto); // Destruye el objeto
+                Destroy(objeto); //destruye el objeto
             }
-            yield return null; // Espera un frame antes de continuar la verificación
+            yield return null; 
         }
     }
 
