@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
 
+
 public class PuntuacionAlta : MonoBehaviour
 {
     public static PuntuacionAlta Instance;

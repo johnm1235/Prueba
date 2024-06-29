@@ -353,6 +353,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Canasta.cs"
+"Assets/Scripts/ColorPicket.cs"
 "Assets/Scripts/GeneradorObjetos.cs"
 "Assets/Scripts/Puntuacion.cs"
 "Assets/Scripts/PuntuacionAlta.cs"
