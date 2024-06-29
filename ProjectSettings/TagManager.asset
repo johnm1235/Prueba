@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Objeto
+  - Limit
+  - Dange
   layers:
   - Default
   - TransparentFX

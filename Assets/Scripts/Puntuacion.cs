@@ -5,18 +5,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
+using System.Drawing;
+using UnityEditor;
 
 public class Puntuacion : MonoBehaviour
 {
-
-
     public Text ScoreText;
     public Text ScoreText2;
-    public GameObject GameOverText;
-
-    private bool m_Started = false;
-    private int m_Points;
-    private bool m_GameOver = false;
+    private int m_Points = 0;
 
     class SaveData
     {
@@ -24,90 +20,80 @@ public class Puntuacion : MonoBehaviour
         public int highScore;
     }
 
+    void Start()
+    {
+        LoadScore();
+
+    }
     private void Update()
     {
-        if (!m_Started)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                m_Started = true;
-            }
-        }
-        else if (m_GameOver)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+      
 
-            }
-        }
     }
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Objeto"))
         {
-            Debug.Log("Objeto en la canasta");
-            // Suma 1 punto en lugar de 0 cuando el objeto toca la canasta
-            AddPoint(1);
-            // Destruye el objeto que tocó la canasta
+            // Incrementa el puntaje
+            m_Points++;
+            ScoreText.text = "Score: " + m_Points;
             Destroy(other.gameObject);
         }
+        else
+        if (other.gameObject.CompareTag("Dange"))
+        {
+            GameOver();
+        }
+       
+    }
+
+    public void Exit()
+    {
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
+        //  MainManager.Instance.SaveColor();
     }
 
 
-    void AddPoint(int point)
-    {
-        m_Points += point;
-        ScoreText.text = $"Score : {m_Points}";
-    }
 
-    public void GameOver()
+    private void GameOver()
     {
-        m_GameOver = true;
-        GameOverText.SetActive(true);
+        PuntuacionAlta.Instance.TryUpdateHighScore(m_Points);
         SaveScore();
+        SceneManager.LoadScene(0);
     }
+
 
     public void SaveScore()
     {
-        SaveData data = LoadData();
-        if (m_Points > data.highScore)
-        {
-            data.highScore = m_Points;
-            string json = JsonUtility.ToJson(data);
-            File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
-        }
-        /*
+        
         SaveData data = new SaveData();
           data.score = m_Points;
           string json = JsonUtility.ToJson(data);
-          File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);*/
+          File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
     }
+
     public void LoadScore()
     {
-
-        /*
         string path = Application.persistentDataPath + "/savefile.json";
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
             SaveData data = JsonUtility.FromJson<SaveData>(json);
             ScoreText2.text = $"Last Score : {data.score}";
-        }*/
-
-        SaveData data = LoadData();
-        ScoreText2.text = $"Best Score : {data.highScore}";
-    }
-
-    private SaveData LoadData()
-    {
-        string path = Application.persistentDataPath + "/savefile.json";
-        if (File.Exists(path))
-        {
-            string json = File.ReadAllText(path);
-            return JsonUtility.FromJson<SaveData>(json);
         }
-        return new SaveData();
+        // Añade esta línea para mostrar la puntuación más alta
+        ScoreText2.text += $"\nBest Score: {PuntuacionAlta.Instance.HighScore}";
     }
+
+
 }
