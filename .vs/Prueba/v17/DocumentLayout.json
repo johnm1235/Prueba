@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\assets\\scripts\\puntuacionalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puntuacionalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|d:\\descargas\\ciclo 4\\programacion\\prueba\\prueba\\assets\\scripts\\puntuacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puntuacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\assets\\scripts\\generadorobjetos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\generadorobjetos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\assets\\scripts\\canasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\canasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\assets\\scripts\\puntuacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puntuacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|d:\\descargas\\ciclo 4\\programacion\\prueba\\prueba\\assets\\scripts\\puntuacionalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF888A70-572D-CA02-6189-9552E87BF096}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puntuacionalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Canasta.cs",
               "DocumentMoniker": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\Canasta.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Canasta.cs",
               "ToolTip": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\Canasta.cs",
               "RelativeToolTip": "Assets\\Scripts\\Canasta.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAAB4AAAAFAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAADgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T15:23:19.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GeneradorObjetos.cs",
               "DocumentMoniker": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\GeneradorObjetos.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GeneradorObjetos.cs",
               "ToolTip": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\GeneradorObjetos.cs",
               "RelativeToolTip": "Assets\\Scripts\\GeneradorObjetos.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAACgAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T15:36:50.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Puntuacion.cs",
               "DocumentMoniker": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\Puntuacion.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Puntuacion.cs",
               "ToolTip": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\Puntuacion.cs",
               "RelativeToolTip": "Assets\\Scripts\\Puntuacion.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAAAD8AAAA6AAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAuwDMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T15:58:39.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PuntuacionAlta.cs",
               "DocumentMoniker": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\PuntuacionAlta.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PuntuacionAlta.cs",
               "ToolTip": "D:\\Descargas\\Ciclo 4\\Programacion\\Prueba\\Prueba\\Assets\\Scripts\\PuntuacionAlta.cs",
               "RelativeToolTip": "Assets\\Scripts\\PuntuacionAlta.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAACQAAAAjAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T22:35:52.63Z",
               "EditorCaption": ""

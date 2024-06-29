@@ -46,4 +46,11 @@ public class Canasta : MonoBehaviour
             transform.position = new Vector3(-limites, transform.position.y, transform.position.z);
         }
     }
+
+    //Genera un posicion aleatoria
+    protected Vector3 GenerarPosicionAleatoria(float limiteIzquierdo, float limiteDerecho, float y, float z)
+    {
+        float x = Random.Range(limiteIzquierdo, limiteDerecho);
+        return new Vector3(x, y, z);
+    }
 }

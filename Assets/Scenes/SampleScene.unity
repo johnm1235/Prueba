@@ -518,7 +518,7 @@ Transform:
   m_GameObject: {fileID: 810062841}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.57188195, y: 13.04, z: 0.44077387}
+  m_LocalPosition: {x: -0.57188195, y: 20, z: 0.44077387}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -537,15 +537,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canasta: {fileID: 1756362345}
-  horizantalInput: 0
-  velocidad: 5
-  limites: 10
   objetos:
   - {fileID: 5155460190452294248, guid: ba4dc461b787b6740bd2c7183be33cae, type: 3}
   - {fileID: 7956727080982939478, guid: 0cbd0d6a2d446094995c6226db5f6a95, type: 3}
   tiempoMin: 1
   tiempoMax: 2
-  limiteSuperior: 20
+  limiteSuperior: 30
   limiteInferior: -10
   limiteIzquierdo: -10
   limiteDerecho: 10
@@ -1026,9 +1023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canasta: {fileID: 1756362345}
-  horizantalInput: 0
-  velocidad: 10
-  limites: 10
 --- !u!65 &2091747017
 BoxCollider:
   m_ObjectHideFlags: 0
